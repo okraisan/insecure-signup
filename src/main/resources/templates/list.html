@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event participants</title>
+    </head>
+    <body>
+        <h2>Event participants</h2>
+        
+        <ul>
+    <li th:each="item : ${list}">
+        <span th:text="${item}"></span>
+    </li>
+</ul>
+    </body>
+</html>
