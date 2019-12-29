@@ -1,7 +1,7 @@
 LINK: https://github.com/okraisan/insecure-signup
 
 The project will open in NetBeans IDE 11.2 as is, and can be started normally,
-like any of the exercises. It is a web application that runs in port 8080 on localhost.
+like any of the TMC exercises on this course. It is a Tomcat web application that runs in port 8080, on localhost.
 
 
 
@@ -30,7 +30,7 @@ A2:2017-Broken Authentication
 
 The list of signed up people should only be accessible to an administrator. However,
 the authentication is flawed; it is only based on a URL parameter with no password
-authentication. Anyone inspecting the URL can change admin=false to admin=true and
+authentication. Anyone inspecting the URL can become an administrator by changing admin=false to admin=true and
 suddenly get access to the list of people. This seems like an outrageous decision
 on part of the developers, but "authentication" schemes like this have been seen
 in the past, at least anecdotally; the original story can be found by searching for
@@ -39,7 +39,7 @@ in the past, at least anecdotally; the original story can be found by searching 
 The URL parameter should be replaced with a proper authentication scheme, preferably based on
 sending a password that is then verified against a hashed and salted version of the correct
 password on the server side. No login information should
-be sent in the URL parameter; instead, the contents of a login form should be
+be sent in the URL parameter; instead, the password and other contents of a login form should be
 transmitted in an encrypted POST request. The decision of whether someone is
 an administrator or not should be left to the server.
 
